@@ -41,6 +41,12 @@ def max_value_node(node):
         current = current.right
     return current
 
+def min_value(node):
+    return min_value_node(node).val
+
+def max_value(node):
+    return max_value_node(node).val
+
 def sum_tree_values(node):
     if node is None:
         return 0
@@ -76,6 +82,6 @@ root = insert(root, 7)
 root = insert(root, 6)
 root = insert(root, 8)
 
-print("Найбільше значення в дереві:", max_value_node(root).val)
-print("Найменше значення в дереві:", min_value_node(root).val)
+print("Найбільше значення в дереві:", max_value(root))
+print("Найменше значення в дереві:", min_value(root))
 print("Сума значень в дереві:", sum_tree_values(root))
